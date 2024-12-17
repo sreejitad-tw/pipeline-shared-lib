@@ -1,4 +1,3 @@
 def call(String name){
-   display = "hello ${name}"
-   return display
+   echo "hello ${name}"
 }
