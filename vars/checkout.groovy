@@ -1,8 +1,10 @@
 def checkout_func (Map details){
-     checkout ([
-            $class: 'GitSCM',
-            userRemoteConfigs: [[url: details.url]],
-            branches: [[name: details.branch]]
-         ])
+    def scmConfig = [
+        $class: 'GitSCM',
+        branches: [[name: "*/${details.branch}"]],
+        userRemoteConfigs: [[url: deatils.url]]
+    ]
+    checkout scm: scmConfig
+
 }
     
