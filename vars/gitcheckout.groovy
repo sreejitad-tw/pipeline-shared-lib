@@ -1,4 +1,4 @@
-def checkout_func (Map details){
+def call (Map details){
     checkout([
             $class: 'GitSCM',
             branches: [[name:  details.branch ]],
