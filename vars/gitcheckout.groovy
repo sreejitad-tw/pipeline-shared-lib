@@ -1,10 +1,9 @@
 def checkout_func (Map details){
-    checkout(
-        scmGit(
+    checkout([
             $class: 'GitSCM',
             branches: [[name:  details.branch ]],
-            remote: [[ url: details.url ]]
-        )
+            userRemoteConfigs: [[ url: details.url ]]
+    ]
     )
 
 }
